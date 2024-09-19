@@ -1,4 +1,5 @@
 css
+
 /* On fait en sorte que chaque élément contienne sa marge interne avec box-sizing et on retire les traits qui sont par défaut sur les liens */
 * {
   box-sizing: border-box;
@@ -13,7 +14,7 @@ nav {
   box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
   display: flex;
   overflow: hidden;
-  overflow-x: auto;
+  overflow-x:auto;
   position: relative;
 }
 
@@ -43,6 +44,7 @@ nav {
 .nav-item:not(.is-active):hover:before {
   bottom: 0;
 }
+
 .nav-item:not(.is-active):hover {
   color: #333;
 }
@@ -64,14 +66,61 @@ a {
 .navigateurG {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  position: fixed;
 }
 
 .navigateurD {
   margin-left: auto;
+
 }
 
 .hero {
-height: 500px;
-background-repeat: no-repeat;
+  height: max-content;
+  background-repeat: no-repeat;
   background-image: url("https://static.wixstatic.com/media/4b9fef_8c2ec054f445403687bdfdd53f56a2e9~mv2.jpg/v1/fill/w_1809,h_760,al_c,q_85,enc_auto/4b9fef_8c2ec054f445403687bdfdd53f56a2e9~mv2.jpg");
 }
+
+#help {
+  position: fixed;
+  display: block;
+  
+  right: 20px;
+  bottom: 20px;
+  
+  font-size: 2em;
+  padding: 15px;
+  
+  background-color: #3498db; /* Couleur légèrement modifiée pour plus de contraste */
+  color: #fff;
+  
+  border: none;
+  outline: none;
+  border-radius: 50px; /* Ajout d'arrondis pour un effet bouton plus moderne */
+  
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Ombre pour un effet de profondeur */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Effets de transition */
+}
+
+#help:hover {
+  background-color: #2980b9; /* Changement de couleur au hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Intensification de l'ombre au survol */
+  transform: translateY(-5px); /* Légère élévation lors du survol pour effet 3D */
+}
+
+#help:active {
+  transform: translateY(0); /* Retour à la position initiale lors du clic */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Restauration de l'ombre après clic */
+}
+
+#ababa{
+width: 150px;
+height: 500px;
+}
+
+#obobo{
+  width: 500;
+  height: 250px;
+  }
