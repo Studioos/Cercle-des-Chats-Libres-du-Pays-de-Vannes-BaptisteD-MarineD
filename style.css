@@ -10,11 +10,11 @@ css
 nav {
   background-color: #fff;
   padding: 0 20px;
-  border-radius: 40px;
-  box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+  border-radius: 50px;
+  box-shadow: 0 10px 40px rgba(180, 183, 196, 0.8);
   display: flex;
   overflow: hidden;
-  overflow-x:auto;
+  overflow-x: auto;
   position: relative;
 }
 
@@ -31,9 +31,9 @@ nav {
 .nav-item:before {
   content: "";
   position: absolute;
-  bottom: -6px;
-  background-color: #14c3c3;
-  height: 5px;
+  bottom: -7px;
+  background-color: #179AB4 ;
+  height: 6px;
   width: 100%;
   border-radius: 8px 8px 0 0;
   left: 0;
@@ -64,12 +64,14 @@ a {
 }
 
 .navigateurG {
+  width: 80%;
+  position: fixed;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 80%;
-  margin: 0 auto;
-  position: fixed;
+  margin-top: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+
 }
 
 .navigateurD {
@@ -84,43 +86,55 @@ a {
 }
 
 #help {
+  font-size: small;
+
   position: fixed;
   display: block;
-  
+
   right: 20px;
   bottom: 20px;
-  
+
   font-size: 2em;
   padding: 15px;
-  
-  background-color: #3498db; /* Couleur légèrement modifiée pour plus de contraste */
-  color: #fff;
-  
+
+  background-color: #ffffff;
+  /* Couleur légèrement modifiée pour plus de contraste */
+  color: #000000;
+
+
   border: none;
   outline: none;
-  border-radius: 50px; /* Ajout d'arrondis pour un effet bouton plus moderne */
-  
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Ombre pour un effet de profondeur */
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Effets de transition */
+  border-radius: 50px;
+  /* Ajout d'arrondis pour un effet bouton plus moderne */
+
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  /* Ombre pour un effet de profondeur */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  /* Effets de transition */
 }
 
 #help:hover {
-  background-color: #2980b9; /* Changement de couleur au hover */
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Intensification de l'ombre au survol */
-  transform: translateY(-5px); /* Légère élévation lors du survol pour effet 3D */
+  background-color: #179AB4 ;
+  /* Changement de couleur au hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+  /* Intensification de l'ombre au survol */
+  transform: translateY(-5px);
+  /* Légère élévation lors du survol pour effet 3D */
 }
 
 #help:active {
-  transform: translateY(0); /* Retour à la position initiale lors du clic */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Restauration de l'ombre après clic */
+  transform: translateY(0);
+  /* Retour à la position initiale lors du clic */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  /* Restauration de l'ombre après clic */
 }
 
-#ababa{
-width: 150px;
-height: 500px;
+#ababa {
+  width: 150px;
+  height: 500px;
 }
 
-#obobo{
+#obobo {
   width: 500;
   height: 250px;
-  }
+}
