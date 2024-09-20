@@ -1,140 +1,171 @@
-css
+/* Variables CSS en français */
+:root {
+  --couleur-primaire: hwb(0 100% 0%);
+  --couleur-secondaire: #179AB4;
+  --couleur-texte: #202020;
+  --couleur-fond: #fff;
+  --police-principale: Arial, sans-serif;
+}
 
-/* On fait en sorte que chaque élément contienne sa marge interne avec box-sizing et on retire les traits qui sont par défaut sur les liens */
+/* Réinitialisation des marges/paddings et modernisation */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
 }
 
-/* On modernise notre balise de navigation avec une petite ombre. On mets tous les éléments du menu les uns bien à côté des autres avec flexbox (display: flex) */
-nav {
-  background-color: #fff;
-  padding: 0 20px;
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--police-principale);
+  line-height: 1.6;
+  color: var(--couleur-texte);
+}
+
+/* Barre de navigation */
+.navigation {
+  background-color: var(--couleur-primaire);
+  padding: 10px 20px;
   border-radius: 50px;
-  box-shadow: 0 10px 40px rgba(180, 183, 196, 0.8);
+  box-shadow: 0 10px 40px rgba(158, 240, 255, 0.12);
   display: flex;
-  overflow: hidden;
+  align-items: center;
   overflow-x: auto;
-  position: relative;
+  position: fixed;
+  top: 10px;
+  left: 10%;
+  right: 10%;
+  width: 80%;
 }
 
-/* On stylise chaque élément */
+/* Correction pour que le logo ne soit pas déformé */
+.logo img {
+  height: 60px; /* Taille fixe pour éviter la déformation */
+  width: auto;  /* La largeur s'adapte proportionnellement */
+}
+
+/* Navigation */
 .nav-item {
-  color: #303030;
-  font-family: arial, sans-serif;
+  color: var(--couleur-texte);
+  font-family: var(--police-principale);
   padding: 20px;
   margin: 0 6px;
   position: relative;
+  white-space: nowrap;
 }
 
-/* Ici on met juste un petit élément avant chaque élément pour le rendre plus beau visuellement */
-.nav-item:before {
-  content: "";
-  position: absolute;
-  bottom: -7px;
-  background-color: #179AB4 ;
-  height: 6px;
-  width: 100%;
-  border-radius: 8px 8px 0 0;
-  left: 0;
-  transition: .3s;
-}
-
-/* Avec les dernières nouveautés de CSS, on peut changer les propriétés des éléments selon des conditions avec not */
-.nav-item:not(.is-active):hover:before {
-  bottom: 0;
-}
-
-.nav-item:not(.is-active):hover {
-  color: #333;
-}
-
-/* Stylisons notre indicateur */
-.nav-indicator {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 5px;
-  transition: .4s;
-  border-radius: 8px 8px 0 0;
-}
-
+/* Enlève le soulignement des liens */
 a {
   text-decoration: none;
 }
 
-.navigateurG {
-  width: 80%;
+/* Ajoute une bordure colorée sous l'élément actif */
+.nav-item:before {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  background-color: var(--couleur-secondaire);
+  height: 6px;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  left: 0;
+  transition: bottom 0.3s ease;
+}
+
+.nav-item:not(.actif):hover:before {
+  bottom: 0;
+}
+
+/* Ajoute un changement de couleur lors du survol */
+.nav-item:not(.actif):hover {
+  color: #333;
+}
+
+/* Stylisons notre indicateur de navigation */
+.nav-indicateur {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  transition: left 0.4s ease, width 0.4s ease;
+  background-color: var(--couleur-secondaire);
+  border-radius: 8px 8px 0 0;
+}
+
+/* Bouton d'aide */
+#aide {
+  font-size: 1em;
   position: fixed;
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  margin-left: 10%;
-  margin-right: 10%;
-
-}
-
-.navigateurD {
-  margin-left: auto;
-
-}
-
-.hero {
-  height: max-content;
-  background-repeat: no-repeat;
-  background-image: url("https://static.wixstatic.com/media/4b9fef_8c2ec054f445403687bdfdd53f56a2e9~mv2.jpg/v1/fill/w_1809,h_760,al_c,q_85,enc_auto/4b9fef_8c2ec054f445403687bdfdd53f56a2e9~mv2.jpg");
-}
-
-#help {
-  font-size: small;
-
-  position: fixed;
-  display: block;
-
   right: 20px;
   bottom: 20px;
-
-  font-size: 2em;
   padding: 15px;
-
-  background-color: #ffffff;
-  /* Couleur légèrement modifiée pour plus de contraste */
-  color: #000000;
-
-
+  background-color: var(--couleur-fond);
+  color: #000;
   border: none;
-  outline: none;
   border-radius: 50px;
-  /* Ajout d'arrondis pour un effet bouton plus moderne */
-
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-  /* Ombre pour un effet de profondeur */
   transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-  /* Effets de transition */
 }
 
-#help:hover {
-  background-color: #179AB4 ;
-  /* Changement de couleur au hover */
+#aide:hover {
+  background-color: var(--couleur-secondaire);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
-  /* Intensification de l'ombre au survol */
   transform: translateY(-5px);
-  /* Légère élévation lors du survol pour effet 3D */
 }
 
-#help:active {
-  transform: translateY(0);
-  /* Retour à la position initiale lors du clic */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-  /* Restauration de l'ombre après clic */
+/* Section principale avec image de fond */
+.heros {
+  height: 100vh;
+  background: url('https://static.wixstatic.com/media/4b9fef_8c2ec054f445403687bdfdd53f56a2e9~mv2.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#ababa {
-  width: 150px;
-  height: 500px;
+.texte-centré {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 25px;
+  max-width: 90vw;
 }
 
-#obobo {
-  width: 500;
-  height: 250px;
+/* Pied de page */
+.pied-de-page {
+  background-color: var(--couleur-fond);
+  color: black;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 5px solid var(--couleur-primaire);
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenu-footer h2 {
+  font-size: 1.5rem;
+  color: var(--couleur-primaire);
+  margin-bottom: 10px;
+}
+
+.contenu-footer p {
+  font-size: 1rem;
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 768px) {
+  .navigation {
+      padding: 10px;
+      width: 90vw;
+      margin: 0 auto;
+  }
+
+  .pied-de-page {
+      padding: 30px 10px;
+  }
+
+  .nav-item {
+      padding: 10px;
+  }
 }
