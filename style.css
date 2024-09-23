@@ -1,6 +1,6 @@
 /* Variables CSS en français */
 :root {
-  --couleur-primaire: #94C973;
+  --couleur-primaire: hwb(0 100% 0%);
   --couleur-secondaire: #179AB4;
   --couleur-texte: #202020;
   --couleur-fond: #fff;
@@ -33,7 +33,9 @@ body {
   box-shadow: 0 10px 40px rgba(158, 240, 255, 0.12);
   display: flex;
   align-items: center;
+
   overflow: hidden;
+
   overflow-x: auto;
   position: fixed;
   top: 10px;
@@ -42,28 +44,53 @@ body {
   width: 80%;
 }
 
+
+/* Correction pour que le logo ne soit pas déformé */
+.logo img {
+  height: 60px; /* Taille fixe pour éviter la déformation */
+  width: auto;  /* La largeur s'adapte proportionnellement */
+}
+
+/* Navigation */
 .nav-item {
   color: var(--couleur-texte);
-  padding: 15px;
+  font-family: var(--police-principale);
+  padding: 20px;
+
   margin: 0 6px;
   position: relative;
   white-space: nowrap;
 }
 
+
+/* Enlève le soulignement des liens */
+a {
+  text-decoration: none;
+}
+
+/* Ajoute une bordure colorée sous l'élément actif */
 .nav-item:before {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -7px;
   background-color: var(--couleur-secondaire);
-  height: 4px;
+  height: 6px;
   width: 100%;
   border-radius: 8px 8px 0 0;
+  left: 0;
   transition: bottom 0.3s ease;
 }
 
-.nav-item:hover:before {
+.nav-item:not(.actif):hover:before {
   bottom: 0;
 }
+
+/* Ajoute un changement de couleur lors du survol */
+.nav-item:not(.actif):hover {
+  color: #333;
+}
+
+/* Stylisons notre indicateur de navigation */
 
 .nav-indicateur {
   position: absolute;
