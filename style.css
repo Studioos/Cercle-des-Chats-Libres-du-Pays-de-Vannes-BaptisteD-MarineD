@@ -33,15 +33,33 @@ body {
   box-shadow: 0 10px 40px rgba(158, 240, 255, 0.12);
   display: flex;
   align-items: center;
-
   overflow: hidden;
-
   overflow-x: auto;
   position: fixed;
   top: 10px;
   left: 10%;
   right: 10%;
   width: 80%;
+  z-index: 100;
+}
+
+.logo img {
+  height: 60px; /* Taille fixe pour éviter la déformation */
+  width: auto;  /* La largeur s'adapte proportionnellement */
+}
+
+/* Menu Toggle pour mobile */
+.menu-toggle {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* caché sur les grands écrans */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
 }
 
 
@@ -54,21 +72,12 @@ body {
 /* Navigation */
 .nav-item {
   color: var(--couleur-texte);
-  font-family: var(--police-principale);
-  padding: 20px;
-
+  padding: 15px;
   margin: 0 6px;
   position: relative;
   white-space: nowrap;
 }
 
-
-/* Enlève le soulignement des liens */
-a {
-  text-decoration: none;
-}
-
-/* Ajoute une bordure colorée sous l'élément actif */
 .nav-item:before {
   content: "";
   position: absolute;
@@ -92,6 +101,12 @@ a {
 
 /* Stylisons notre indicateur de navigation */
 
+/* Ajoute un changement de couleur lors du survol */
+.nav-item:not(.actif):hover {
+  color: #333;
+}
+
+/* Stylisons notre indicateur de navigation */
 .nav-indicateur {
   position: absolute;
   left: 0;
@@ -163,16 +178,49 @@ a {
 /* Media queries pour les petits écrans */
 @media (max-width: 768px) {
   .navigation {
-      padding: 10px;
-      width: 90vw;
-      margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    left: 5%;
+    right: 5%;
   }
 
-  .pied-de-page {
-      padding: 30px 10px;
+  .logo {
+    order: 1; /* Logo à gauche */
+  }
+
+  .menu-toggle {
+    display: block;
+    order: 2; /* Menu à droite */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--couleur-fond); /* Fond plus large pour le menu */
+    padding: 20px 40px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
   }
 
   .nav-item {
-      padding: 10px;
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .heros {
+    background-position: top;
+  }
+
+  .pied-de-page {
+    padding: 30px 10px;
   }
 }
