@@ -33,6 +33,9 @@ body {
   box-shadow: 0 10px 40px rgba(158, 240, 255, 0.12);
   display: flex;
   align-items: center;
+
+  overflow: hidden;
+
   overflow-x: auto;
   position: fixed;
   top: 10px;
@@ -40,6 +43,7 @@ body {
   right: 10%;
   width: 80%;
 }
+
 
 /* Correction pour que le logo ne soit pas déformé */
 .logo img {
@@ -52,10 +56,12 @@ body {
   color: var(--couleur-texte);
   font-family: var(--police-principale);
   padding: 20px;
+
   margin: 0 6px;
   position: relative;
   white-space: nowrap;
 }
+
 
 /* Enlève le soulignement des liens */
 a {
@@ -85,6 +91,7 @@ a {
 }
 
 /* Stylisons notre indicateur de navigation */
+
 .nav-indicateur {
   position: absolute;
   left: 0;
