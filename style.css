@@ -128,16 +128,31 @@ body {
   height: 100vh;
   background: url('image/img_chat_index_accueil.webp') no-repeat center center/cover;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* Centre le contenu verticalement */
+  justify-content: center; /* Centre le contenu horizontalement */
+  flex-direction: column;
+  padding: 100px; /* Ajoute du padding */
 }
 
-.texte-centré {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 25px;
-  max-width: 90vw;
+.texte_index_h1 {
+  background-color: rgba(255, 255, 255, 0.8); /* Pour que le texte soit plus lisible sur l'image */
+  padding: 20px; /* Ajoute un padding autour du texte */
+  border-radius: 10px; /* Arrondit les coins du fond */
+  margin-left: 55%;
 }
+.texte_index_help {
+  background-color:#179AB4; /* Pour que le texte soit plus lisible sur l'image */
+  padding: 20px; /* Ajoute un padding autour du texte */
+  border-radius: 10px; /* Arrondit les coins du fond */
+  margin-left: 55%;
+
+}
+
+
+.index_chiffre {
+  background-color: #179AB4;
+}
+
 
 /* Pied de page */
 .pied-de-page {
@@ -222,6 +237,7 @@ body {
 .gauche, .droite {
   flex: 1; /* Prend 50% de l'espace disponible */
   padding: 20px;
+  margin: 20px;
 }
 
 .droite {

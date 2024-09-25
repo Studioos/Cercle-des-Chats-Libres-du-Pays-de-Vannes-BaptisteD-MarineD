@@ -12,6 +12,7 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            margin-top: 100px;
         }
 
         .faq-item {
@@ -48,18 +49,25 @@
 
 <body>
 
-    <nav class="navigateurG">
-        <a href="index.html">
-            <img src="https://static.wixstatic.com/media/4b9fef_f860ef0ec60c46c19302d1a7df8b5044~mv2.png"
-                alt="Logo du site Cercle des Chats Libres" width="100px">
+
+        <!-- Barre de navigation avec aria-label pour l'accessibilité -->
+    <nav class="navigation" aria-label="Navigation principale">
+        <a href="index.html" class="logo">
+            <img id="logo" src="https://static.wixstatic.com/media/4b9fef_f860ef0ec60c46c19302d1a7df8b5044~mv2.png"
+                alt="Logo Cercle des Chats Libres" width="100" height="105">
         </a>
-        <a href="index.html" class="nav-item"><b>Cercle des Chats Libres</b></a>
-        <a href="Guide.html" class="nav-item navigateurD"><b>Guide du chats heureux</b></a>
-        <a href="FAQ.html" class="nav-item is-active"><b>F.A.Q</b></a>
-        <a href="Adopte.html" class="nav-item"><b>Adopte</b></a>
-        <a href="#" class="nav-item"><b>Mon espace</b></a>
-        <span class="nav-indicator"></span>
+        <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item actif"><b>Cercle des Chats Libres</b></a>
+            <a href="Guide.html" class="nav-item"><b>Guide du chat heureux</b></a>
+            <a href="FAQ.html" class="nav-item"><b>F.A.Q</b></a>
+            <a href="Adopte.html" class="nav-item"><b>Adopte</b></a>
+            <a href="#" class="nav-item"><b>Mon espace</b></a>
+        </div>
+        <span class="nav-indicateur"></span>
     </nav>
+
+
     <h1>FAQ sur les chats</h1>
 
     <div class="faq-item">
