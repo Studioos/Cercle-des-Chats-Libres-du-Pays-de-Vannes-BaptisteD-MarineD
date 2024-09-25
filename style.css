@@ -1,4 +1,4 @@
-/* Variables CSS en français */
+/* Variables CSS */
 :root {
   --couleur-primaire: hwb(0 100% 0%);
   --couleur-secondaire: #179AB4;
@@ -25,7 +25,7 @@ body {
   color: var(--couleur-texte);
 }
 
-/* Barre de navigation */
+/* Navigation */
 .navigation {
   background-color: var(--couleur-primaire);
   padding: 10px 20px;
@@ -33,8 +33,6 @@ body {
   box-shadow: 0 10px 40px rgba(158, 240, 255, 0.12);
   display: flex;
   align-items: center;
-  overflow: hidden;
-  overflow-x: auto;
   position: fixed;
   top: 10px;
   left: 10%;
@@ -44,17 +42,16 @@ body {
 }
 
 .logo img {
-  height: 60px; /* Taille fixe pour éviter la déformation */
-  width: auto;  /* La largeur s'adapte proportionnellement */
+  height: 60px;
+  width: auto;
 }
 
-/* Menu Toggle pour mobile */
 .menu-toggle {
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
-  display: none; /* caché sur les grands écrans */
+  display: none;
 }
 
 .nav-links {
@@ -62,14 +59,7 @@ body {
   align-items: center;
 }
 
-
-/* Correction pour que le logo ne soit pas déformé */
-.logo img {
-  height: 60px; /* Taille fixe pour éviter la déformation */
-  width: auto;  /* La largeur s'adapte proportionnellement */
-}
-
-/* Navigation */
+/* Navigation des éléments */
 .nav-item {
   color: var(--couleur-texte);
   padding: 15px;
@@ -94,27 +84,8 @@ body {
   bottom: 0;
 }
 
-/* Ajoute un changement de couleur lors du survol */
 .nav-item:not(.actif):hover {
   color: #333;
-}
-
-/* Stylisons notre indicateur de navigation */
-
-/* Ajoute un changement de couleur lors du survol */
-.nav-item:not(.actif):hover {
-  color: #333;
-}
-
-/* Stylisons notre indicateur de navigation */
-.nav-indicateur {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 5px;
-  transition: left 0.4s ease, width 0.4s ease;
-  background-color: var(--couleur-secondaire);
-  border-radius: 8px 8px 0 0;
 }
 
 /* Bouton d'aide */
@@ -147,7 +118,7 @@ body {
   justify-content: center;
 }
 
-.texte-centré {
+.texte-centre {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 25px;
@@ -175,7 +146,7 @@ body {
   font-size: 1rem;
 }
 
-/* Media queries pour les petits écrans */
+/* Media Queries */
 @media (max-width: 768px) {
   .navigation {
     flex-direction: row;
@@ -186,20 +157,15 @@ body {
     right: 5%;
   }
 
-  .logo {
-    order: 1; /* Logo à gauche */
-  }
-
   .menu-toggle {
     display: block;
-    order: 2; /* Menu à droite */
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: var(--couleur-fond); /* Fond plus large pour le menu */
+    background-color: var(--couleur-fond);
     padding: 20px 40px;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -217,84 +183,30 @@ body {
   }
 
   .heros {
-    background-position: top;
-  }
-
-  .pied-de-page {
-    padding: 30px 10px;
+    background-size: cover;
   }
 }
 
 .section-separee {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #f4f4f4; /* Couleur de fond */
-}
-
-.gauche {
-  flex: 1; /* Prend 50% de l'espace disponible */
+  margin: 50px 0;
   padding: 20px;
 }
 
+.gauche,
 .droite {
-  flex: 1; /* Prend 50% de l'espace disponible */
-  text-align: center; /* Centre l'image */
-}
-
-img {
-  max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
-  height: auto; /* Garde les proportions de l'image */
-}
-
-/* Media queries pour les petits écrans */
-@media (max-width: 768px) {
-  .section-separee {
-      flex-direction: column; /* Colonne pour les petits écrans */
-      align-items: center; /* Centre le contenu */
-  }
-  
-  .gauche,
-  .droite {
-      text-align: center; /* Centre le texte */
-      padding: 10px; /* Réduit le padding sur les petits écrans */
-  }
-}
-
-.section-separee {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #f4f4f4; /* Couleur de fond */
-}
-
-.droite {
-  flex: 1; /* Prend 50% de l'espace disponible */
-  text-align: center; /* Centre l'image */
-}
-
-.gauche {
-  flex: 1; /* Prend 50% de l'espace disponible */
+  flex: 1;
   padding: 20px;
 }
 
-img {
-  max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
-  height: auto; /* Garde les proportions de l'image */
+.gauche h2,
+.droite h2 {
+  margin-bottom: 10px;
 }
 
-/* Media queries pour les petits écrans */
-@media (max-width: 768px) {
-  .section-separee {
-      flex-direction: column; /* Colonne pour les petits écrans */
-      align-items: center; /* Centre le contenu */
-  }
-  
-  .gauche,
-  .droite {
-      text-align: center; /* Centre le texte */
-      padding: 10px; /* Réduit le padding sur les petits écrans */
-  }
+.gauche p,
+.droite p {
+  font-size: 1rem;
 }
