@@ -4,22 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Bienvenue sur le site du Cercle des Chats Libres du Pays de Vannes. Découvrez des informations sur les chats, des guides, des FAQ, et comment adopter un chat.">
+    <meta name="description" content="Bienvenue sur le site du Cercle des Chats Libres du Pays de Vannes. Découvrez des informations sur les chats, des guides, des FAQ, et comment adopter un chat.">
     <title>Cercle des Chats Libres</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Bouton d'aide fixe -->
+    <!-- Bouton d'aide fixe en bas à droite -->
     <button id="aide" aria-label="Accéder à la page d'aide" onclick="location.href='Aide.html'">Aidez-nous</button>
 
-    <!-- Navigation -->
+    <!-- Barre de navigation avec aria-label pour l'accessibilité -->
     <nav class="navigation" aria-label="Navigation principale">
         <a href="index.html" class="logo">
-            <img id="logo" src="https://static.wixstatic.com/media/4b9fef_f860ef0ec60c46c19302d1a7df8b5044~mv2.png"
-                alt="Logo Cercle des Chats Libres" width="100" height="105">
+            <img id="logo" src="https://static.wixstatic.com/media/4b9fef_f860ef0ec60c46c19302d1a7df8b5044~mv2.png" alt="Logo Cercle des Chats Libres" width="100" height="105">
         </a>
         <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
         <div class="nav-links">
@@ -29,51 +27,57 @@
             <a href="Adopte.html" class="nav-item"><b>Adopte</b></a>
             <a href="#" class="nav-item"><b>Mon espace</b></a>
         </div>
+        <span class="nav-indicateur"></span>
     </nav>
 
     <!-- Section principale avec image de fond -->
     <section class="heros">
-        <div class="texte-centre">
+        <div class="texte-centré">
             <h1>Les chats libres <br> du pays de Vannes</h1>
         </div>
     </section>
 
-    <!-- Sections séparées -->
+    <!-- Section séparée 1 -->
     <section class="section-separee">
         <div class="gauche">
             <h2>Titre de la Section</h2>
-            <p>Voici un texte descriptif qui explique le contenu de cette section.</p>
+            <p>
+                Voici un texte descriptif qui explique le contenu de cette section. 
+                Vous pouvez ajouter plus de détails ici pour captiver vos lecteurs.
+            </p>
         </div>
         <div class="droite">
             <img src="image/image_chat.webp" alt="Description de l'image" loading="lazy" />
         </div>
     </section>
 
+    <!-- Section séparée 2 -->
     <section class="section-separee">
         <div class="droite">
-            <img src="https://via.placeholder.com/300" alt="Description de l'image" loading="lazy" />
+            <img src="image/img_chat_langue.webp" alt="Description de l'image" loading="lazy" />
         </div>
         <div class="gauche">
             <h2>Titre de la Section</h2>
-            <p>Voici un texte descriptif qui explique le contenu de cette section.</p>
+            <p>
+                Voici un texte descriptif qui explique le contenu de cette section. 
+                Vous pouvez ajouter plus de détails ici pour captiver vos lecteurs.
+            </p>
         </div>
     </section>
 
     <!-- Pied de page -->
     <footer class="pied-de-page">
         <div class="contenu-footer">
-            <h2>Cercle des chats libres de Vannes</h2>
+            <h2>Cercle des Chats Libres de Vannes</h2>
             <p>&copy; 2024 - Tous droits réservés.</p>
         </div>
     </footer>
 
-    <!-- Script pour la navigation responsive -->
+    <!-- Script pour rendre la navigation responsive -->
     <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        const logo = document.querySelector('#logo');
-
-        menuToggle.addEventListener('click', () => {
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            const logo = document.querySelector('#logo');
             navLinks.classList.toggle('open');
             logo.style.display = navLinks.classList.contains('open') ? 'none' : 'block';
         });
