@@ -141,7 +141,7 @@ body {
 /* Section principale avec image de fond */
 .heros {
   height: 100vh;
-  background: url('https://static.wixstatic.com/media/4b9fef_8c2ec054f445403687bdfdd53f56a2e9~mv2.jpg') no-repeat center center/cover;
+  background: url('image/img_chat_index_accueil.webp') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -222,5 +222,79 @@ body {
 
   .pied-de-page {
     padding: 30px 10px;
+  }
+}
+
+.section-separee {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4; /* Couleur de fond */
+}
+
+.gauche {
+  flex: 1; /* Prend 50% de l'espace disponible */
+  padding: 20px;
+}
+
+.droite {
+  flex: 1; /* Prend 50% de l'espace disponible */
+  text-align: center; /* Centre l'image */
+}
+
+img {
+  max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
+  height: auto; /* Garde les proportions de l'image */
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 768px) {
+  .section-separee {
+      flex-direction: column; /* Colonne pour les petits écrans */
+      align-items: center; /* Centre le contenu */
+  }
+  
+  .gauche,
+  .droite {
+      text-align: center; /* Centre le texte */
+      padding: 10px; /* Réduit le padding sur les petits écrans */
+  }
+}
+
+.section-separee {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4; /* Couleur de fond */
+}
+
+.droite {
+  flex: 1; /* Prend 50% de l'espace disponible */
+  text-align: center; /* Centre l'image */
+}
+
+.gauche {
+  flex: 1; /* Prend 50% de l'espace disponible */
+  padding: 20px;
+}
+
+img {
+  max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
+  height: auto; /* Garde les proportions de l'image */
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 768px) {
+  .section-separee {
+      flex-direction: column; /* Colonne pour les petits écrans */
+      align-items: center; /* Centre le contenu */
+  }
+  
+  .gauche,
+  .droite {
+      text-align: center; /* Centre le texte */
+      padding: 10px; /* Réduit le padding sur les petits écrans */
   }
 }
