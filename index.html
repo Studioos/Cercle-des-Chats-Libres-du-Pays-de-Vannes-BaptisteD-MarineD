@@ -17,7 +17,7 @@
     <!-- Barre de navigation avec aria-label pour l'accessibilité -->
     <nav class="navigation" aria-label="Navigation principale">
         <a href="index.html" class="logo">
-            <img class="nav-logo" src="https://static.wixstatic.com/media/4b9fef_f860ef0ec60c46c19302d1a7df8b5044~mv2.png" alt="Logo Cercle des Chats Libres" width="100" height="105">
+            <img id="logo" src="https://static.wixstatic.com/media/4b9fef_f860ef0ec60c46c19302d1a7df8b5044~mv2.png" alt="Logo Cercle des Chats Libres" width="100" height="105">
         </a>
         <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
         <div class="nav-links">
@@ -49,11 +49,18 @@
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
-const imgLogo = document.querySelector('.nav-logo');
+        const logo = document.querySelector('#logo');
 
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('open');
-            imgLogo.style.display = 'none';
+            // Vérifie si le menu est ouvert
+            if (navLinks.classList.contains('open')) {
+                // Cache le logo si le menu est ouvert
+                logo.style.display = 'none';
+            } else {
+                // Affiche le logo si le menu est fermé
+                logo.style.display = 'block';
+            }
         });
     </script>
 
