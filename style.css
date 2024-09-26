@@ -165,10 +165,10 @@ margin:auto;
   margin-left: 55%;
 }
 
-.texte_index_help {
+.texte_index_aide {
   background-color: #179AB4;
   /* Pour que le texte soit plus lisible sur l'image */
-  padding: 20px;
+  padding: 50px;
   /* Ajoute un padding autour du texte */
   border-radius: 10px;
   /* Arrondit les coins du fond */
