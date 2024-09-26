@@ -33,11 +33,14 @@ body {
   box-shadow: 0 10px 40px rgba(158, 240, 255, 0.12);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 20px;
   overflow: hidden;
   position: fixed;
   top: 20px;
-  left: 10%;
-  right: 10%;
+  left:0;
+  right: 0;
+margin:auto;
   width: 80%;
   z-index: 100;
 }
@@ -62,6 +65,8 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
+  gap:10px;
+
 }
 
 /* Navigation */
@@ -153,8 +158,6 @@ body {
 }
 
 .texte_index_h1 {
-  background-color: rgba(255, 255, 255, 0.8);
-  /* Pour que le texte soit plus lisible sur l'image */
   padding: 20px;
   /* Ajoute un padding autour du texte */
   border-radius: 10px;
@@ -201,10 +204,10 @@ body {
 }
 
 /* Media queries pour les petits écrans */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .navigation {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 90vw;
     left: 5%;

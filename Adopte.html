@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,25 +13,52 @@
 
 <body>
 
-        <!-- Bouton d'aide fixe en bas à droite -->
-        <button id="aide" aria-label="Accéder à la page d'aide" onclick="location.href='Aide.html'">Aidez-nous</button>
+    <!-- Bouton d'aide fixe en bas à droite -->
+    <button id="aide" aria-label="Accéder à la page d'aide" onclick="location.href='Aide.html'">Aidez-nous</button>
 
-        <nav class="navigation" aria-label="Navigation principale">
-            <a href="index.html" class="logo">
-                <img id="logo" src="https://static.wixstatic.com/media/4b9fef_f860ef0ec60c46c19302d1a7df8b5044~mv2.png"
-                    alt="Logo Cercle des Chats Libres" width="100" height="105">
-            </a>
-            <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
-            <div class="nav-links">
-                <a href="index.html" class="nav-item actif"><b>Cercle des Chats Libres</b></a>
-                <a href="Guide.html" class="nav-item"><b>Guide du chat heureux</b></a>
-                <a href="FAQ.html" class="nav-item"><b>F.A.Q</b></a>
-                <a href="Adopte.html" class="nav-item"><b>Adopte</b></a>
-                <a href="#" class="nav-item"><b>Mon espace</b></a>
+    <nav class="navigation" aria-label="Navigation principale">
+        <a href="index.html" class="logo">
+            <img id="logo" src="https://static.wixstatic.com/media/4b9fef_f860ef0ec60c46c19302d1a7df8b5044~mv2.png"
+                alt="Logo Cercle des Chats Libres" width="100" height="105">
+        </a>
+        <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item actif"><b>Cercle des Chats Libres</b></a>
+            <a href="Guide.html" class="nav-item"><b>Guide du chat heureux</b></a>
+            <a href="FAQ.html" class="nav-item"><b>F.A.Q</b></a>
+            <a href="Adopte.html" class="nav-item"><b>Adopte</b></a>
+            <a href="#" class="nav-item"><b>Mon espace</b></a>
+        </div>
+        <span class="nav-indicateur"></span>
+    </nav>
+
+    <!-- Section Chiffre -->
+    <section class="index_chiffre">
+        <h2>Chiffres Clés</h2>
+        <div class="chiffres-container">
+            <div class="chiffre">
+                <h3 class="chiffre-valeur">212</h3>
+                <p class="chiffre-description">Chats sauvés en 2022</p>
             </div>
-            <span class="nav-indicateur"></span>
-        </nav>
+            <div class="chiffre">
+                <h3 class="chiffre-valeur">38</h3>
+                <p class="chiffre-description">Chats libres nourris en 2022</p>
+            </div>
+            <div class="chiffre">
+                <h3 class="chiffre-valeur">10</h3>
+                <p class="chiffre-description">Îlots de nourrissage de chats</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="pied-de-page">
+        <div class="contenu-footer">
+            <h3>Cercle des Chats Libres de Vannes</h3>
+            <p>&copy; 2024 - Tous droits réservés.</p>
+        </div>
+    </footer>
 
 </body>
-</html>
 
+</html>
