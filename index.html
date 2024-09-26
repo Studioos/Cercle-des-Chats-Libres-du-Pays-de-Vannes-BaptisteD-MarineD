@@ -14,7 +14,7 @@
 
     <!-- Barre de navigation avec aria-label pour l'accessibilité -->
     <nav class="navigation" aria-label="Navigation principale">
-        <a href="index.html" class="logo">
+        <a href="index.html" class="logo" aria-label="Accueil">
             <img id="logo" src="https://static.wixstatic.com/media/4b9fef_f860ef0ec60c46c19302d1a7df8b5044~mv2.png"
                 alt="Logo Cercle des Chats Libres" width="100" height="105">
         </a>
@@ -32,61 +32,67 @@
     <!-- Section principale avec image de fond -->
     <section class="heros">
         <div class="texte_index_h1">
-            <h1>Les chats libres du pays de Vannes</h1>
+            <h1 class="titre_accueil">Les chats libres du pays de Vannes</h1>
         </div>
-        <div class="texte_index_help"><h2>Aidez-nous</h2></div>
-            
+        <div class="texte_index_help">
+            <p>Aidez-nous</p>
         </div>
-
     </section>
 
     <!-- Section séparée 1 -->
     <section class="section-separee">
         <div class="gauche">
-            <h3>Nos missions</h3>
+            <h2 class="titre_blue">Nos missions</h2>
             <p>
-                Améliorer la situation des chats errants telle est notre volonté :
-                en nous occupant des chats qui nous sont signalés.- en les plaçant en famille d’accueil pour
-                sociabilisation s’ils paraissent adoptables.
-                en créant des îlots de chats stérilisés, tatoués, vaccinés et nourris qui deviennent alors des « chats
-                Libres » protégés parla loi, 
-                en informant; pour ainsi éviter les euthanasies en série et récurrentes, les situations misérables dans
-                lesquelles sont certains chats...
+                Améliorer la situation des chats errants telle est notre volonté : en nous occupant des chats qui nous
+                sont signalés, en les plaçant en famille d’accueil pour sociabilisation s’ils paraissent adoptables, en
+                créant des îlots de chats stérilisés, tatoués, vaccinés et nourris qui deviennent alors des « chats
+                Libres » protégés par la loi, en informant pour ainsi éviter les euthanasies en série et récurrentes,
+                les situations misérables dans lesquelles sont certains chats...
             </p>
         </div>
         <div class="droite">
-            <img src="image/image_chat.webp" alt="Description de l'image" loading="lazy" />
+            <img src="image/image_chat.webp" alt="Chat Blanc" loading="lazy" />
         </div>
     </section>
 
     <!-- Section séparée 2 -->
     <section class="section-separee">
         <div class="droite">
-            <img src="image/img_chat_langue.webp" alt="Description de l'image" loading="lazy" />
+            <img src="image/img_chat_langue.webp" alt="Chat avec la langue tirée" loading="lazy" />
         </div>
         <div class="gauche">
-            <h3>Titre de la Section</h3>
+            <h2 class="titre_blue">Notre histoire</h2>
             <p>
-                L'association a été créée le 06/02/2020 assemblée constitutive et officialisée le 08/04/20 par la préfecture du Morbihan. Elle est issue d'une association "de fait" Le cercle des chats disparus", que nous avions montée dans le quartier de la présidente suite à la disparition d'une trentaine de chats pour mener des recherches, réflexions et créer des contacts .
- 
-A cette occasion, nous avons rencontré le maire de Vannes et rapidement travaillé avec les services techniques, la fourrière et la police . 
-​
-Il a semblé évident de créer une association pour les chats des rues , de regrouper des personnes qui déjà œuvraient seules dans des conditions difficiles.
+                L'association a été créée le 06/02/2020 lors de l'assemblée constitutive et officialisée le 08/04/20 par
+                la préfecture du Morbihan. Elle est issue de l'association "de fait" Le cercle des chats disparus, que
+                nous avions montée dans le quartier de la présidente suite à la disparition d'une trentaine de chats
+                pour mener des recherches, réflexions et créer des contacts.
+                A cette occasion, nous avons rencontré le maire de Vannes et rapidement travaillé avec les services
+                techniques, la fourrière et la police. Il a semblé évident de créer une association pour les chats des
+                rues, de regrouper des personnes qui déjà œuvraient seules dans des conditions difficiles.
             </p>
         </div>
     </section>
 
     <!-- Section Chiffre -->
-     <section class="index_chiffre">
-        <p>
-            L'association a été créée le 06/02/2020 assemblée constitutive et officialisée le 08/04/20 par la préfecture du Morbihan. Elle est issue d'une association "de fait" Le cercle des chats disparus", que nous avions montée dans le quartier de la présidente suite à la disparition d'une trentaine de chats pour mener des recherches, réflexions et créer des contacts .
- 
-A cette occasion, nous avons rencontré le maire de Vannes et rapidement travaillé avec les services techniques, la fourrière et la police . 
-​
-Il a semblé évident de créer une association pour les chats des rues , de regrouper des personnes qui déjà œuvraient seules dans des conditions difficiles.
-        </p>
-
-     </section>
+    <section class="index_chiffre">
+        <h2>Chiffres Clés</h2>
+        <div class="chiffres-container">
+            <div class="chiffre">
+                <h3 class="chiffre-valeur">212</h3>
+                <p class="chiffre-description">Chats sauvés en 2022</p>
+            </div>
+            <div class="chiffre">
+                <h3 class="chiffre-valeur">38</h3>
+                <p class="chiffre-description">Chats libres nourris en 2022</p>
+            </div>
+            <div class="chiffre">
+                <h3 class="chiffre-valeur">10</h3>
+                <p class="chiffre-description">Îlots de nourrissage de chats</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Pied de page -->
     <footer class="pied-de-page">

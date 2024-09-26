@@ -35,7 +35,7 @@ body {
   align-items: center;
   overflow: hidden;
   position: fixed;
-  top: 10px;
+  top: 20px;
   left: 10%;
   right: 10%;
   width: 80%;
@@ -43,8 +43,10 @@ body {
 }
 
 .logo img {
-  height: 60px; /* Taille fixe pour éviter la déformation */
-  width: auto;  /* La largeur s'adapte proportionnellement */
+  height: 60px;
+  /* Taille fixe pour éviter la déformation */
+  width: auto;
+  /* La largeur s'adapte proportionnellement */
 }
 
 /* Menu Toggle pour mobile */
@@ -53,7 +55,8 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  display: none; /* caché sur les grands écrans */
+  display: none;
+  /* caché sur les grands écrans */
 }
 
 .nav-links {
@@ -128,22 +131,44 @@ body {
   height: 100vh;
   background: url('image/img_chat_index_accueil.webp') no-repeat center center/cover;
   display: flex;
-  align-items: center; /* Centre le contenu verticalement */
-  justify-content: center; /* Centre le contenu horizontalement */
+  align-items: center;
+  /* Centre le contenu verticalement */
+  justify-content: center;
+  /* Centre le contenu horizontalement */
   flex-direction: column;
-  padding: 100px; /* Ajoute du padding */
+  padding: 100px;
+}
+
+/* Section principal FAQ avec image de fond */
+.heros_faq {
+  height: 100vh;
+  background: url('image/image_chat_faq.webp') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  /* Centre le contenu verticalement */
+  justify-content: center;
+  /* Centre le contenu horizontalement */
+  flex-direction: column;
+  padding: 100px;
 }
 
 .texte_index_h1 {
-  background-color: rgba(255, 255, 255, 0.8); /* Pour que le texte soit plus lisible sur l'image */
-  padding: 20px; /* Ajoute un padding autour du texte */
-  border-radius: 10px; /* Arrondit les coins du fond */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Pour que le texte soit plus lisible sur l'image */
+  padding: 20px;
+  /* Ajoute un padding autour du texte */
+  border-radius: 10px;
+  /* Arrondit les coins du fond */
   margin-left: 55%;
 }
+
 .texte_index_help {
-  background-color:#179AB4; /* Pour que le texte soit plus lisible sur l'image */
-  padding: 20px; /* Ajoute un padding autour du texte */
-  border-radius: 10px; /* Arrondit les coins du fond */
+  background-color: #179AB4;
+  /* Pour que le texte soit plus lisible sur l'image */
+  padding: 20px;
+  /* Ajoute un padding autour du texte */
+  border-radius: 10px;
+  /* Arrondit les coins du fond */
   margin-left: 55%;
 
 }
@@ -187,19 +212,22 @@ body {
   }
 
   .logo {
-    order: 1; /* Logo à gauche */
+    order: 1;
+    /* Logo à gauche */
   }
 
   .menu-toggle {
     display: block;
-    order: 2; /* Menu à droite */
+    order: 2;
+    /* Menu à droite */
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: var(--couleur-fond); /* Fond plus large pour le menu */
+    background-color: var(--couleur-fond);
+    /* Fond plus large pour le menu */
     padding: 20px 40px;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -231,33 +259,174 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f4f4f4; /* Couleur de fond */
+  background-color: #f4f4f4;
+  /* Couleur de fond */
 }
 
-.gauche, .droite {
-  flex: 1; /* Prend 50% de l'espace disponible */
+.gauche,
+.droite {
+  flex: 1;
+  /* Prend 50% de l'espace disponible */
   padding: 20px;
   margin: 20px;
 }
 
 .droite {
-  text-align: center; /* Centre l'image */
+  text-align: center;
+  /* Centre l'image */
 }
 
 img {
-  max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
-  height: auto; /* Garde les proportions de l'image */
+  max-width: 100%;
+  /* Assure que l'image ne dépasse pas la largeur de son conteneur */
+  height: auto;
+  /* Garde les proportions de l'image */
 }
 
 /* Media queries pour les petits écrans */
 @media (max-width: 768px) {
   .section-separee {
-    flex-direction: column; /* Colonne pour les petits écrans */
-    align-items: center; /* Centre le contenu */
+    flex-direction: column;
+    /* Colonne pour les petits écrans */
+    align-items: center;
+    /* Centre le contenu */
   }
-  
-  .gauche, .droite {
-    text-align: center; /* Centre le texte */
-    padding: 10px; /* Réduit le padding sur les petits écrans */
+
+  .gauche,
+  .droite {
+    text-align: center;
+    /* Centre le texte */
+    padding: 10px;
+    /* Réduit le padding sur les petits écrans */
   }
+}
+
+.index_chiffre {
+  padding: 50px;
+  background-color: #248df0;
+  /* Couleur de fond */
+  text-align: center;
+  /* Centre le texte */
+}
+
+.chiffres-container {
+  display: flex;
+  /* Utilise Flexbox pour une disposition en ligne */
+  justify-content: space-around;
+  /* Espace entre les chiffres */
+  flex-wrap: wrap;
+  /* Permet au contenu de passer à la ligne sur petits écrans */
+}
+
+.chiffre {
+  flex: 1;
+  /* Chaque partie prend une portion égale de l'espace */
+  max-width: 300px;
+  /* Largeur maximale pour éviter l'étirement excessif */
+  margin: 20px;
+  /* Marge autour de chaque chiffre */
+  padding: 20px;
+  /* Espacement interne */
+  background-color: #fff;
+  /* Couleur de fond pour chaque chiffre */
+  border-radius: 10px;
+  /* Coins arrondis */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Ombre pour effet de profondeur */
+}
+
+.chiffre-valeur {
+  font-size: 2.5rem;
+  /* Taille de la valeur */
+  color: var(--couleur-secondaire);
+  /* Couleur secondaire */
+  margin-bottom: 10px;
+  /* Espace sous la valeur */
+}
+
+.chiffre-description {
+  font-size: 1.2rem;
+  /* Taille de la description */
+  color: var(--couleur-texte);
+  /* Couleur du texte */
+}
+
+.titre_blue {
+  color: #179AB4;
+  font-size: 75px;
+}
+
+.titre_accueil {
+  font-size: 100px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+.faq-item {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.faq-question {
+  background-color: #f5f5f5;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.faq-answer {
+  padding: 10px;
+  display: none;
+}
+
+.faq-question::after {
+  content: '\25BC';
+  float: right;
+}
+
+.faq-question.active::after {
+  content: '\25B2';
 }

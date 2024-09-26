@@ -6,42 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F.A.Q</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            margin-top: 100px;
-        }
-
-        .faq-item {
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .faq-question {
-            background-color: #f5f5f5;
-            padding: 10px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .faq-answer {
-            padding: 10px;
-            display: none;
-        }
-
-        .faq-question::after {
-            content: '\25BC';
-            float: right;
-        }
-
-        .faq-question.active::after {
-            content: '\25B2';
-        }
-    </style>
 </head>
 
 <script>const indicator = document.querySelector('.nav-indicator');
@@ -51,7 +15,7 @@
     <!-- Bouton d'aide fixe en bas à droite -->
     <button id="aide" aria-label="Accéder à la page d'aide" onclick="location.href='Aide.html'">Aidez-nous</button>
 
-        <!-- Barre de navigation avec aria-label pour l'accessibilité -->
+    <!-- Barre de navigation avec aria-label pour l'accessibilité -->
     <nav class="navigation" aria-label="Navigation principale">
         <a href="index.html" class="logo">
             <img id="logo" src="https://static.wixstatic.com/media/4b9fef_f860ef0ec60c46c19302d1a7df8b5044~mv2.png"
@@ -68,8 +32,16 @@
         <span class="nav-indicateur"></span>
     </nav>
 
+    <!-- Section principale avec image de fond -->
+    <section class="heros_faq">
+        <div class="texte_index_h1">
+        </div>
 
-    <h1>FAQ sur les chats</h1>
+    </section>
+
+
+
+    <h1 class="titre_blue">FAQ sur les chats</h1>
 
     <div class="faq-item">
         <div class="faq-question">Quelle est la durée de vie moyenne d'un chat ?</div>
@@ -105,6 +77,18 @@
             });
         });
     </script>
+
+<div class="carousel">
+    <div class="carousel-inner">
+        <img src="image/image_carrousel/chat_carrousel_1.webp" alt="Image 1" class="active">
+        <img src="image/image_carrousel/chat_carrousel_2.webp" alt="Image 2">
+        <img src="image/image_carrousel/chat_carrousel_3.webp" alt="Image 3">
+    </div>
+    <button class="prev">&lt;</button>
+    <button class="next">&gt;</button>
+</div>
+<script src="./script.js"></script>
+
 </body>
 
 </html>

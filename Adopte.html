@@ -15,16 +15,20 @@
         <!-- Bouton d'aide fixe en bas à droite -->
         <button id="aide" aria-label="Accéder à la page d'aide" onclick="location.href='Aide.html'">Aidez-nous</button>
 
-        <nav class="navigateurG">
-            <img href="index.html"
-                src="https://static.wixstatic.com/media/4b9fef_f860ef0ec60c46c19302d1a7df8b5044~mv2.png/v1/fill/w_194,h_105,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/4b9fef_f860ef0ec60c46c19302d1a7df8b5044~mv2.png"
-                alt="" width="100px">
-            <a href="index.html" class="nav-item "><b>Cercle des Chats Libres</b></a>
-            <a href="Guide.html" class="nav-item navigateurD "><b>Guide du chats heureux</b</a>
-            <a href="FAQ.html" class="nav-item"><b>F.A.Q</b></a>
-            <a href="Adopte.html" class="nav-item is-active"><b>Adopte</b></a>
-            <a href="#" class="nav-item"><b>Mon espace</b></a>
-            <span class="nav-indicator"></span>
+        <nav class="navigation" aria-label="Navigation principale">
+            <a href="index.html" class="logo">
+                <img id="logo" src="https://static.wixstatic.com/media/4b9fef_f860ef0ec60c46c19302d1a7df8b5044~mv2.png"
+                    alt="Logo Cercle des Chats Libres" width="100" height="105">
+            </a>
+            <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item actif"><b>Cercle des Chats Libres</b></a>
+                <a href="Guide.html" class="nav-item"><b>Guide du chat heureux</b></a>
+                <a href="FAQ.html" class="nav-item"><b>F.A.Q</b></a>
+                <a href="Adopte.html" class="nav-item"><b>Adopte</b></a>
+                <a href="#" class="nav-item"><b>Mon espace</b></a>
+            </div>
+            <span class="nav-indicateur"></span>
         </nav>
 
 </body>
