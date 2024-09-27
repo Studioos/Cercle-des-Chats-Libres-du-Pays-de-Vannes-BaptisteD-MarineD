@@ -433,3 +433,21 @@ p {
 .faq-question.active::after {
   content: '\25B2';
 }
+
+.btn-aide {
+  background-color: #FF4500;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-aide:hover {
+  background-color: #FF6347;
+}
