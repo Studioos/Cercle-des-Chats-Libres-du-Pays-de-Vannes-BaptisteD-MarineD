@@ -35,12 +35,11 @@
     <!-- Section principale avec image de fond -->
     <section class="heros_faq">
         <div class="texte_index_h1">
+            <h1 class="titre_accueil">FAQ</h1>
         </div>
-
     </section>
 
-
-
+    <section class="section_FAQ">
     <h1 class="titre_blue">FAQ sur les chats</h1>
 
     <div class="faq-item">
@@ -67,36 +66,29 @@
             et recherche l'interaction avec ses propriétaires. Il aura également un pelage brillant et des yeux vifs.
         </div>
     </div>
+</section>
 
-    <script>
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                question.classList.toggle('active');
-                const answer = question.nextElementSibling;
-                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-            });
-        });
-    </script>
 
-<div class="carousel">
-    <div class="carousel-inner">
-        <img src="image/image_carrousel/chat_carrousel_1.webp" alt="Image 1" class="active">
-        <img src="image/image_carrousel/chat_carrousel_2.webp" alt="Image 2">
-        <img src="image/image_carrousel/chat_carrousel_3.webp" alt="Image 3">
+
+    <div class="carousel">
+        <div class="carousel-inner">
+            <img src="image/image_carrousel/chat_carrousel_1.webp" alt="Image 1" class="active">
+            <img src="image/image_carrousel/chat_carrousel_2.webp" alt="Image 2">
+            <img src="image/image_carrousel/chat_carrousel_3.webp" alt="Image 3">
+        </div>
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
     </div>
-    <button class="prev">&lt;</button>
-    <button class="next">&gt;</button>
-</div>
 
-<!-- Pied de page -->
-<footer class="pied-de-page">
-    <div class="contenu-footer">
-        <h3>Cercle des Chats Libres de Vannes</h3>
-        <p>&copy; 2024 - Tous droits réservés.</p>
-    </div>
-</footer>
+    <!-- Pied de page -->
+    <footer class="pied-de-page">
+        <div class="contenu-footer">
+            <h3>Cercle des Chats Libres de Vannes</h3>
+            <p>&copy; 2024 - Tous droits réservés.</p>
+        </div>
+    </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 

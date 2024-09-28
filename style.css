@@ -204,7 +204,7 @@ margin:auto;
 }
 
 /* Media queries pour les petits écrans */
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
   .navigation {
     flex-direction: row;
     justify-content: space-around;
@@ -280,6 +280,11 @@ margin:auto;
   /* Centre l'image */
 }
 
+.titre_blue {
+  color: #179AB4;
+  font-size: 70px;
+}
+
 img {
   max-width: 100%;
   /* Assure que l'image ne dépasse pas la largeur de son conteneur */
@@ -287,14 +292,26 @@ img {
   /* Garde les proportions de l'image */
 }
 
+.titre_accueil {
+  font-size: 75px; /* Ajuste la taille pour les écrans plus petits */
+}
+
 /* Media queries pour les petits écrans */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .section-separee {
     flex-direction: column;
     /* Colonne pour les petits écrans */
     align-items: center;
     /* Centre le contenu */
   }
+
+.titre_blue {
+    font-size: 35px; /* Ajuste la taille pour les écrans plus petits */
+}
+
+.titre_accueil {
+    font-size: 30px; /* Ajuste la taille pour les écrans plus petits */
+}
 
   .gauche,
   .droite {
@@ -303,6 +320,7 @@ img {
     padding: 10px;
     /* Réduit le padding sur les petits écrans */
   }
+
 }
 
 .index_chiffre {
@@ -353,15 +371,6 @@ img {
   /* Taille de la description */
   color: var(--couleur-texte);
   /* Couleur du texte */
-}
-
-.titre_blue {
-  color: #179AB4;
-  font-size: 75px;
-}
-
-.titre_accueil {
-  font-size: 100px;
 }
 
 p {
@@ -436,19 +445,20 @@ p {
 }
 
 .btn-aide {
-  background-color: #FF4500;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
   display: inline-block;
-  transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  background-color:#179AB4; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte */
+  text-align: center;
+  text-decoration: none; /* Supprime la sous-ligne du lien */
+  border-radius: 5px; /* Coins arrondis */
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Effet de transition */
 }
 
 .btn-aide:hover {
-  background-color: #FF6347;
+  color: #000;
+  background-color: #f4f4f4; /* Couleur au survol */
 }
+
