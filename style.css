@@ -19,6 +19,89 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Media queries pour les petits écrans */
+@media (max-width: 1050px) {
+  .navigation {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    left: 5%;
+    right: 5%;
+  }
+
+
+  .logo {
+    order: 1;
+    /* Logo à gauche */
+  }
+
+  .menu-toggle {
+    display: block;
+    order: 2;
+    /* Menu à droite */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--couleur-fond);
+    /* Fond plus large pour le menu */
+    padding: 20px 40px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .heros {
+    background-position: top;
+  }
+
+  .pied-de-page {
+    padding: 30px 10px;
+  }
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 900px) {
+  .section-separee {
+    flex-direction: column;
+    /* Colonne pour les petits écrans */
+    align-items: center;
+    /* Centre le contenu */
+  }
+
+  .titre_blue {
+    font-size: 35px;
+    /* Ajuste la taille pour les écrans plus petits */
+  }
+
+  .titre_accueil {
+    font-size: 30px;
+    /* Ajuste la taille pour les écrans plus petits */
+  }
+
+  .gauche,
+  .droite {
+    text-align: center;
+    /* Centre le texte */
+    padding: 10px;
+    /* Réduit le padding sur les petits écrans */
+  }
+
+}
+
 body {
   font-family: var(--police-principale);
   line-height: 1.6;
@@ -38,9 +121,9 @@ body {
   overflow: hidden;
   position: fixed;
   top: 20px;
-  left:0;
+  left: 0;
   right: 0;
-margin:auto;
+  margin: auto;
   width: 80%;
   z-index: 100;
 }
@@ -65,7 +148,7 @@ margin:auto;
 .nav-links {
   display: flex;
   align-items: center;
-  gap:10px;
+  gap: 10px;
 
 }
 
@@ -96,7 +179,7 @@ margin:auto;
 
 /* Ajoute un changement de couleur lors du survol */
 .nav-item:not(.actif):hover {
-  color: #333;
+  color: #202020;
 }
 
 /* Stylisation de l'indicateur de navigation */
@@ -203,60 +286,6 @@ margin:auto;
   font-size: 1rem;
 }
 
-/* Media queries pour les petits écrans */
-@media (max-width: 1000px) {
-  .navigation {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 90vw;
-    left: 5%;
-    right: 5%;
-  }
-
- 
-  .logo {
-    order: 1;
-    /* Logo à gauche */
-  }
-
-  .menu-toggle {
-    display: block;
-    order: 2;
-    /* Menu à droite */
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--couleur-fond);
-    /* Fond plus large pour le menu */
-    padding: 20px 40px;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-item {
-    padding: 15px;
-    margin: 0;
-    width: 100%;
-    text-align: left;
-  }
-
-  .heros {
-    background-position: top;
-  }
-
-  .pied-de-page {
-    padding: 30px 10px;
-  }
-}
-
 /* Sections séparées */
 .section-separee {
   display: flex;
@@ -282,7 +311,7 @@ margin:auto;
 
 .titre_blue {
   color: #179AB4;
-  font-size: 70px;
+  font-size: 50px;
 }
 
 img {
@@ -293,35 +322,11 @@ img {
 }
 
 .titre_accueil {
-  font-size: 75px; /* Ajuste la taille pour les écrans plus petits */
+  font-size: 60px;
+  /* Ajuste la taille pour les écrans plus petits */
 }
 
-/* Media queries pour les petits écrans */
-@media (max-width: 1000px) {
-  .section-separee {
-    flex-direction: column;
-    /* Colonne pour les petits écrans */
-    align-items: center;
-    /* Centre le contenu */
-  }
 
-.titre_blue {
-    font-size: 35px; /* Ajuste la taille pour les écrans plus petits */
-}
-
-.titre_accueil {
-    font-size: 30px; /* Ajuste la taille pour les écrans plus petits */
-}
-
-  .gauche,
-  .droite {
-    text-align: center;
-    /* Centre le texte */
-    padding: 10px;
-    /* Réduit le padding sur les petits écrans */
-  }
-
-}
 
 .index_chiffre {
   padding: 50px;
@@ -447,18 +452,29 @@ p {
 .btn-aide {
   display: inline-block;
   padding: 10px 20px;
-  background-color:#179AB4; /* Couleur de fond du bouton */
-  color: white; /* Couleur du texte */
+  background-color: #179AB4;
+  /* Couleur de fond du bouton */
+  color: white;
+  /* Couleur du texte */
   text-align: center;
-  text-decoration: none; /* Supprime la sous-ligne du lien */
-  border-radius: 5px; /* Coins arrondis */
+  text-decoration: none;
+  /* Supprime la sous-ligne du lien */
+  border-radius: 5px;
+  /* Coins arrondis */
   font-size: 1.2rem;
   font-weight: bold;
-  transition: background-color 0.3s ease; /* Effet de transition */
+  transition: background-color 0.3s ease;
+  /* Effet de transition */
 }
 
 .btn-aide:hover {
   color: #000;
-  background-color: #f4f4f4; /* Couleur au survol */
+  background-color: #f4f4f4;
+  /* Couleur au survol */
 }
-
+.section_FAQ {
+  max-width: 800px; /* Limite la largeur maximale de la section */
+  margin: 0 auto; /* Centre la section horizontalement */
+  margin-top: 25px;
+  padding: 20px; /* Ajoute un espacement interne pour le confort visuel */
+}
