@@ -19,88 +19,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Media queries pour les petits écrans */
-@media (max-width: 1050px) {
-  .navigation {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 90vw;
-    left: 5%;
-    right: 5%;
-  }
-
-
-  .logo {
-    order: 1;
-    /* Logo à gauche */
-  }
-
-  .menu-toggle {
-    display: block;
-    order: 2;
-    /* Menu à droite */
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--couleur-fond);
-    /* Fond plus large pour le menu */
-    padding: 20px 40px;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-item {
-    padding: 15px;
-    margin: 0;
-    width: 100%;
-    text-align: left;
-  }
-
-  .heros {
-    background-position: top;
-  }
-
-  .pied-de-page {
-    padding: 30px 10px;
-  }
-}
-
-/* Media queries pour les petits écrans */
-@media (max-width: 900px) {
-  .section-separee {
-    flex-direction: column;
-    /* Colonne pour les petits écrans */
-    align-items: center;
-    /* Centre le contenu */
-  }
-
-  .titre_blue {
-    font-size: 35px;
-    /* Ajuste la taille pour les écrans plus petits */
-  }
-
-  .titre_accueil {
-    font-size: 30px;
-    /* Ajuste la taille pour les écrans plus petits */
-  }
-
-  .gauche,
-  .droite {
-    text-align: center;
-    /* Centre le texte */
-    padding: 10px;
-    /* Réduit le padding sur les petits écrans */
-  }
-
-}
 
 body {
   font-family: var(--police-principale);
@@ -113,7 +31,7 @@ body {
   background-color: var(--couleur-primaire);
   padding: 10px 20px;
   border-radius: 50px;
-  box-shadow: 0 10px 40px rgba(158, 240, 255, 0.12);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.314);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -216,6 +134,7 @@ body {
 
 /* Section principale avec image de fond */
 .heros {
+  background-position: top;
   height: 100vh;
   background: url('image/img_chat_index_accueil.webp') no-repeat center center/cover;
   display: flex;
@@ -227,8 +146,35 @@ body {
   padding: 100px;
 }
 
+/* Section Aide avec image de fond */
+.heros_aide {
+  background-position: top;
+  height: 100vh;
+  background: url('image/image_chat_aide.webp') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  /* Centre le contenu verticalement */
+  justify-content: center;
+  /* Centre le contenu horizontalement */
+  flex-direction: column;
+  padding: 100px;
+}
+
+/* Section Adopte avec image de fond */
+.heros_adopte {
+  height: 100vh;
+  background: url('image/img_chat_langue.webp') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  /* Centre le contenu verticalement */
+  justify-content: center;
+  /* Centre le contenu horizontalement */
+  flex-direction: column;
+  padding: 100px;
+}
+
 /* Section principal FAQ avec image de fond */
-.heros_faq {
+.hero_faq {
   height: 100vh;
   background: url('image/image_chat_faq.webp') no-repeat center center/cover;
   display: flex;
@@ -246,6 +192,14 @@ body {
   border-radius: 10px;
   /* Arrondit les coins du fond */
   margin-left: 55%;
+}
+
+.texte_adopte_h1 {
+  padding: 20px;
+  /* Ajoute un padding autour du texte */
+  border-radius: 10px;
+  /* Arrondit les coins du fond */
+  margin-right: 55%;
 }
 
 .texte_index_aide {
@@ -472,9 +426,200 @@ p {
   background-color: #f4f4f4;
   /* Couleur au survol */
 }
+
 .section_FAQ {
-  max-width: 800px; /* Limite la largeur maximale de la section */
-  margin: 0 auto; /* Centre la section horizontalement */
+  max-width: 800px;
+  /* Limite la largeur maximale de la section */
+  margin: 0 auto;
+  /* Centre la section horizontalement */
   margin-top: 25px;
-  padding: 20px; /* Ajoute un espacement interne pour le confort visuel */
+  padding: 20px;
+  /* Ajoute un espacement interne pour le confort visuel */
+}
+
+/* Conteneur du quiz */
+#quiz {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour chaque question */
+.question {
+  margin-bottom: 20px;
+}
+
+.question h3 {
+  color: #179AB4;
+  font-size: 1.5rem;
+}
+
+.question p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Style pour les options */
+.question label {
+  display: block;
+  margin: 5px 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.question input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Style du bouton "Soumettre les réponses" */
+#submit {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #179AB4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+  background-color: #127a92;
+}
+
+/* Conteneur des résultats */
+#results {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+/* Changer les couleurs des bonnes et mauvaises réponses */
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+/* Responsivité */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #quiz {
+    padding: 15px;
+  }
+
+  .question h3 {
+    font-size: 1.3rem;
+  }
+
+  .question p {
+    font-size: 1.1rem;
+  }
+
+  #submit {
+    width: 100%;
+  }
+}
+
+.section_adopte {
+  max-width: 800px;
+  /* Limite la largeur maximale de la section */
+  margin: 0 auto;
+  /* Centre la section horizontalement */
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  /* Ajoute un espacement interne pour le confort visuel */
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 1050px) {
+  .navigation {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    left: 5%;
+    right: 5%;
+  }
+
+
+  .logo {
+    order: 1;
+    /* Logo à gauche */
+  }
+
+  .menu-toggle {
+    display: block;
+    order: 2;
+    /* Menu à droite */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--couleur-fond);
+    /* Fond plus large pour le menu */
+    padding: 20px 40px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.385);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+
+
+  .pied-de-page {
+    padding: 30px 10px;
+  }
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 900px) {
+  .section-separee {
+    flex-direction: column;
+    /* Colonne pour les petits écrans */
+    align-items: center;
+    /* Centre le contenu */
+  }
+
+  .titre_blue {
+    font-size: 35px;
+    /* Ajuste la taille pour les écrans plus petits */
+  }
+
+  .titre_accueil {
+    font-size: 30px;
+    /* Ajuste la taille pour les écrans plus petits */
+  }
+
+  .gauche,
+  .droite {
+    text-align: center;
+    /* Centre le texte */
+    padding: 10px;
+    /* Réduit le padding sur les petits écrans */
+  }
+
 }
